@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( ConvToGrayScale )
+find_package( OpenCV REQUIRED )
+add_executable( ConvToGrayScale ConvToGrayScale.cpp )
+target_link_libraries( ConvToGrayScale ${OpenCV_LIBS})
