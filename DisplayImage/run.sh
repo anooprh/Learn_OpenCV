@@ -2,7 +2,7 @@
 
 #############################
 # Helper Debug function
-# _DEBUG="on" 
+_DEBUG="on" 
 
 function _ECHO_MSG() {
  [ "$_DEBUG" == "on" ] &&  echo $@
@@ -52,7 +52,7 @@ CMD="${PROJDIR}/build/${PROJECT_NAME} ${ARGS}"
 
 _ECHO_MSG "Executing $CMD"
 
-`$CMD`
+eval $CMD
 
 _ECHO_MSG "Done..."
 #############################
