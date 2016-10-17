@@ -8,7 +8,9 @@ Get the open source from github
 
 `mkdir build`
 
-`cmake ..`
+`cmake ..`  for plain vanilla Open CV 
+OR 
+`cmake -D OPENCV_EXTRA_MODULES_PATH=<path/to/opencv_contrib/modules@https://github.com/opencv/opencv_contrib/tree/master/modules>` for additional functionality
 
 `make`
 
