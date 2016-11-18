@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( VideoCrop )
+find_package( OpenCV REQUIRED )
+add_executable( VideoCrop VideoCrop.cpp )
+target_link_libraries( VideoCrop ${OpenCV_LIBS})
