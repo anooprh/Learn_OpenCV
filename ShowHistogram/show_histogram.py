@@ -2,12 +2,16 @@ import cv2
 import numpy as np
 import sys
 import matplotlib.pyplot as plt
-
-print sys.argv
-
+import os
 
 
-img = cv2.imread('/home/anoop/Workspace/Learn_OpenCV/data/images/cat_and_dog.jpg')
+file_name = os.path.join(os.path.dirname(__file__), '../data/images/cat_and_dog.jpg')
+
+if len(sys.argv) > 1:
+	file_name = sys.argv[1]
+
+
+img = cv2.imread(file_name)
 
 # If we don't exchange R,B channels, they are distorted in matplotlib.
 # http://stackoverflow.com/questions/40067243/matplotlib-adding-blue-shade-to-an-image 
